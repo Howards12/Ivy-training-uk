@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://ivytrainingconsulting.com/sitemap.xml
