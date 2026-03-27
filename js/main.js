@@ -72,24 +72,25 @@ if (menuBtn && menu) {
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Ensure hero background video auto-plays on mobile/desktop.
+// Ensure homepage intro video auto-plays reliably on mobile/desktop.
 (() => {
-  const heroVideo = document.querySelector(".hero__bg video[autoplay]");
-  if (!heroVideo) return;
+  const introVideo = document.querySelector("[data-robo-intro]");
+  if (!introVideo) return;
 
   const tryPlay = () => {
-    heroVideo.muted = true;
-    heroVideo.defaultMuted = true;
-    heroVideo.playsInline = true;
-    const p = heroVideo.play();
+    introVideo.muted = true;
+    introVideo.defaultMuted = true;
+    introVideo.playsInline = true;
+    const p = introVideo.play();
     if (p && typeof p.catch === "function") p.catch(() => {});
   };
 
-  if (heroVideo.readyState >= 2) {
+  if (introVideo.readyState >= 2) {
     tryPlay();
   } else {
-    heroVideo.addEventListener("loadeddata", tryPlay, { once: true });
+    introVideo.addEventListener("loadeddata", tryPlay, { once: true });
   }
+
   window.addEventListener("load", tryPlay);
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible") tryPlay();
