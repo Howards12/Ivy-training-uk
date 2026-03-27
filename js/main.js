@@ -22,7 +22,15 @@ const nav = document.querySelector(".nav");
     const next = theme === "light" ? "dark" : "light";
     toggle.setAttribute("aria-label", `Switch to ${next} theme`);
     toggle.setAttribute("title", `Switch to ${next} theme`);
-    toggle.textContent = theme === "light" ? "🌙" : "☀";
+    if (theme === "light") {
+      toggle.setAttribute("data-active-theme", "light");
+      toggle.innerHTML =
+        '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M21 12.79A9 9 0 0 1 11.21 3c0-.34.02-.68.06-1A9 9 0 1 0 22 12.73c-.33.04-.67.06-1 .06z"/></svg>';
+    } else {
+      toggle.setAttribute("data-active-theme", "dark");
+      toggle.innerHTML =
+        '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.76 4.84l-1.8-1.79L3.55 4.46l1.79 1.8 1.42-1.42zM1 13h3v-2H1v2zm10-9h2V1h-2v3zm7.45.46l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zM17.24 19.16l1.79 1.79 1.41-1.41-1.79-1.8-1.41 1.42zM20 11v2h3v-2h-3zM12 6a6 6 0 100 12 6 6 0 000-12zm-1 17h2v-3h-2v3zM4.55 19.54l1.41 1.41 1.8-1.79-1.42-1.41-1.79 1.79z"/></svg>';
+    }
   };
 
   toggle.addEventListener("click", () => {
