@@ -7,7 +7,7 @@ const nav = document.querySelector(".nav");
   const root = document.documentElement;
   const storageKey = "ivy-theme";
   const savedTheme = window.localStorage.getItem(storageKey);
-  const initialTheme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "dark";
+  const initialTheme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "light";
   root.setAttribute("data-theme", initialTheme);
 
   if (!nav) return;
