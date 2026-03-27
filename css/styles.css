@@ -58,8 +58,10 @@ img { max-width: 100%; display: block; }
   background: transparent;
   color: var(--text);
   padding: 8px 10px;
+  min-width: 96px;
   border-radius: 10px;
   cursor: pointer;
+  justify-content: center;
 }
 .nav__links { display: flex; align-items: center; gap: 14px; }
 .nav__link { color: var(--muted); padding: 8px 10px; border-radius: 10px; }
@@ -84,6 +86,13 @@ img { max-width: 100%; display: block; }
 .nav__theme-toggle:focus-visible {
   outline: 2px solid var(--ring);
   outline-offset: 2px;
+}
+.nav__theme-toggle--icon {
+  width: 42px;
+  min-width: 42px;
+  padding: 8px;
+  font-size: 18px;
+  line-height: 1;
 }
 .nav__cta {
   background: linear-gradient(135deg, rgba(107,191,107,0.25), rgba(199,173,115,0.18));
@@ -344,14 +353,17 @@ img { max-width: 100%; display: block; }
 
 /* Mobile menu */
 @media (max-width: 860px) {
+  .nav { justify-content: flex-start; }
   .brand { order: 1; }
-  .nav__toggle { display: inline-flex; }
-  .nav__toggle { order: 2; }
   .nav__theme-toggle {
-    order: 3;
-    min-width: 96px;
-    margin-left: 0;
+    order: 2;
+    margin-left: auto;
   }
+  .nav__theme-toggle {
+    min-width: 42px;
+  }
+  .nav__toggle { display: inline-flex; }
+  .nav__toggle { order: 3; margin-left: 8px; }
   .nav__links { order: 4; }
   .nav__links {
     display: none;
@@ -377,6 +389,12 @@ img { max-width: 100%; display: block; }
 .hero__bg-fallback {
   position: absolute;
   inset: 0;
+  display: none;
+}
+
+/* Prefer video by default; fallback image is only for reduced-motion mode */
+.hero__bg video {
+  display: block;
 }
 
 .hero__content {

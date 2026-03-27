@@ -14,14 +14,15 @@ const nav = document.querySelector(".nav");
 
   const toggle = document.createElement("button");
   toggle.type = "button";
-  toggle.className = "nav__theme-toggle";
+  toggle.className = "nav__theme-toggle nav__theme-toggle--icon";
   toggle.setAttribute("aria-live", "polite");
 
   const render = () => {
     const theme = root.getAttribute("data-theme") || "dark";
     const next = theme === "light" ? "dark" : "light";
     toggle.setAttribute("aria-label", `Switch to ${next} theme`);
-    toggle.textContent = theme === "light" ? "Dark mode" : "Light mode";
+    toggle.setAttribute("title", `Switch to ${next} theme`);
+    toggle.textContent = theme === "light" ? "☀" : "🌙";
   };
 
   toggle.addEventListener("click", () => {
@@ -34,7 +35,7 @@ const nav = document.querySelector(".nav");
 
   render();
   if (menuBtn && menu) {
-    nav.insertBefore(toggle, menu);
+    nav.insertBefore(toggle, menuBtn);
   } else {
     nav.appendChild(toggle);
   }
