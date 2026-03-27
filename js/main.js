@@ -72,6 +72,30 @@ if (menuBtn && menu) {
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+// Ensure hero background video auto-plays on mobile/desktop.
+(() => {
+  const heroVideo = document.querySelector(".hero__bg video[autoplay]");
+  if (!heroVideo) return;
+
+  const tryPlay = () => {
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    heroVideo.playsInline = true;
+    const p = heroVideo.play();
+    if (p && typeof p.catch === "function") p.catch(() => {});
+  };
+
+  if (heroVideo.readyState >= 2) {
+    tryPlay();
+  } else {
+    heroVideo.addEventListener("loadeddata", tryPlay, { once: true });
+  }
+  window.addEventListener("load", tryPlay);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") tryPlay();
+  });
+})();
+
 // VDM contact widget (single image with two functional buttons)
 (() => {
   if (document.querySelector(".vdm-widget")) return;
