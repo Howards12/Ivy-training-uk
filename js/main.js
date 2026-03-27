@@ -1,5 +1,6 @@
 const menuBtn = document.querySelector("[data-menu-toggle]");
 const menu = document.querySelector("[data-menu]");
+const nav = document.querySelector(".nav");
 
 // Theme selector (light/dark) persisted in localStorage
 (() => {
@@ -9,7 +10,7 @@ const menu = document.querySelector("[data-menu]");
   const initialTheme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "dark";
   root.setAttribute("data-theme", initialTheme);
 
-  if (!menu) return;
+  if (!nav) return;
 
   const toggle = document.createElement("button");
   toggle.type = "button";
@@ -32,7 +33,11 @@ const menu = document.querySelector("[data-menu]");
   });
 
   render();
-  menu.appendChild(toggle);
+  if (menuBtn && menu) {
+    nav.insertBefore(toggle, menu);
+  } else {
+    nav.appendChild(toggle);
+  }
 })();
 
 if (menuBtn && menu) {

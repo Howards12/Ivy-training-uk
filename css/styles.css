@@ -924,6 +924,10 @@ html[data-theme="light"] .nav__theme-toggle {
 html[data-theme="light"] .nav__theme-toggle:hover {
   background: rgba(16, 35, 26, 0.09);
 }
+html[data-theme="light"] .nav__theme-toggle,
+html[data-theme="light"] .nav__toggle {
+  color: #0b1b14;
+}
 html[data-theme="light"] .nav__link:hover,
 html[data-theme="light"] .nav__group-link:hover {
   background: rgba(11, 27, 20, 0.08);
@@ -1022,6 +1026,19 @@ html[data-theme="light"] .vdm-widget__toggle {
   background: rgba(16,35,26,0.06);
   color: var(--text);
   border-color: rgba(143,109,47,0.4);
+}
+
+@media (max-width: 860px) {
+  html[data-theme="light"] .nav__links {
+    background: rgba(255, 255, 255, 0.97);
+    border-color: rgba(11, 27, 20, 0.18);
+    box-shadow: 0 14px 28px rgba(11, 27, 20, 0.12);
+  }
+  html[data-theme="light"] .nav__link,
+  html[data-theme="light"] .nav__group-label,
+  html[data-theme="light"] .nav__group-link {
+    color: rgba(11, 27, 20, 0.92);
+  }
 }
 
 /* VDM contact widget (combined chat + WhatsApp)
