@@ -429,6 +429,32 @@ img { max-width: 100%; display: block; }
 .testimonial-grid .video { margin-top: 10px; }
 .testimonial-grid .muted { margin-left: auto; margin-right: auto; }
 
+/* Video testimonial cards: static 5-star row (decorative; not tied to a review platform) */
+.testimonial-stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 0 0 10px;
+  color: var(--gold);
+}
+.testimonial-stars__star {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: block;
+  overflow: visible;
+}
+.svg-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+html[data-theme="light"] .testimonial-stars {
+  color: #8f6d2f;
+}
+
 /* Alumni page: three testimonial columns; fixed playback frame (no layout jump / growth) */
 .page-alumni .testimonial-grid--three {
   grid-template-columns: repeat(3, minmax(0, 1fr));
