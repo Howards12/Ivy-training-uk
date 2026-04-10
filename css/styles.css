@@ -429,21 +429,63 @@ img { max-width: 100%; display: block; }
 .testimonial-grid .video { margin-top: 10px; }
 .testimonial-grid .muted { margin-left: auto; margin-right: auto; }
 
-/* Video testimonial cards: static 5-star row (decorative; not tied to a review platform) */
-.testimonial-stars {
+/* Google Business Profile rating: Google-style yellow stars + links (static 5.0 / 5 reviews — update when your profile changes).
+   Replace hrefs with your direct profile URL from Google Maps → Share when ready. */
+.google-rating {
+  --google-star: #fbbc04;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 10px;
+}
+.google-rating--inline {
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  margin: 0 0 10px;
-  color: var(--gold);
+  gap: 8px 12px;
 }
-.testimonial-stars__star {
+.google-rating--feature {
+  align-items: flex-start;
+}
+.google-rating--feature .google-rating__meta {
+  text-align: left;
+  width: 100%;
+  max-width: 100%;
+}
+.google-rating__stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--google-star);
+}
+.google-rating__star {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
   display: block;
   overflow: visible;
+}
+.google-rating--feature .google-rating__star {
+  width: 20px;
+  height: 20px;
+}
+.google-rating__meta {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  text-align: center;
+}
+.google-rating__meta a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.google-rating__meta a:hover {
+  color: var(--text);
+}
+html[data-theme="light"] .google-rating__meta a:hover {
+  color: rgba(11, 27, 20, 0.95);
 }
 .svg-sprite {
   position: absolute;
@@ -451,8 +493,37 @@ img { max-width: 100%; display: block; }
   height: 0;
   overflow: hidden;
 }
-html[data-theme="light"] .testimonial-stars {
-  color: #8f6d2f;
+html[data-theme="light"] .google-rating__stars {
+  --google-star: #f9ab00;
+}
+
+/* Footer: compact Google line */
+.footer__google-reviews {
+  margin-top: 12px;
+  line-height: 1.5;
+}
+.footer__google-reviews a.text-link {
+  display: inline;
+  margin-top: 0;
+}
+.footer__google-stars {
+  display: inline-block;
+  margin-right: 8px;
+  color: #fbbc04;
+  font-size: 15px;
+  letter-spacing: 2px;
+  vertical-align: -1px;
+}
+html[data-theme="light"] .footer__google-stars {
+  color: #f9ab00;
+}
+
+.alumni-photo-card .google-rating--inline {
+  justify-content: center;
+  width: 100%;
+}
+.alumni-photo-card .google-rating__meta {
+  text-align: center;
 }
 
 /* Alumni page: three testimonial columns; fixed playback frame (no layout jump / growth) */
@@ -852,8 +923,7 @@ html[data-theme="light"] .testimonial-stars {
   color: var(--gold);
   font-weight: 900;
 }
-.alumni-link .testimonial-stars--alumni-link {
-  justify-content: flex-start;
+.alumni-link .google-rating--feature {
   margin: 0;
 }
 
