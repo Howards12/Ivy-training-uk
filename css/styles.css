@@ -518,6 +518,16 @@ html[data-theme="light"] .footer__google-stars {
   color: #f9ab00;
 }
 
+/* Trustpilot TrustBox (Mini): loads live TrustScore from Trustpilot; keep token + BUID in sync with dashboard. */
+.footer__trustpilot {
+  margin-top: 14px;
+  max-width: 100%;
+}
+.footer__trustpilot .trustpilot-widget {
+  max-width: min(100%, 400px);
+  min-height: 150px;
+}
+
 .alumni-photo-card .google-rating--inline {
   justify-content: center;
   width: 100%;
