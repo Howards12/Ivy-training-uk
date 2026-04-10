@@ -429,8 +429,8 @@ img { max-width: 100%; display: block; }
 .testimonial-grid .video { margin-top: 10px; }
 .testimonial-grid .muted { margin-left: auto; margin-right: auto; }
 
-/* Google Business Profile rating: Google-style yellow stars + links (static 5.0 / 5 reviews — update when your profile changes).
-   Href target: Google share link to your Business Profile / reviews (e.g. share.google/…). */
+/* Google Business Profile rating: Google-style yellow stars + links (static 5.0 / 7 reviews — update when your profile changes).
+   Href target: Google Business review link (e.g. g.page/r/…/review). */
 .google-rating {
   --google-star: #fbbc04;
   display: flex;
