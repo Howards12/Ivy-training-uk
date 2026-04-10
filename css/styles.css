@@ -430,7 +430,7 @@ img { max-width: 100%; display: block; }
 .testimonial-grid .muted { margin-left: auto; margin-right: auto; }
 
 /* Google Business Profile rating: Google-style yellow stars + links (static 5.0 / 5 reviews — update when your profile changes).
-   Replace hrefs with your direct profile URL from Google Maps → Share when ready. */
+   Href target: Google share link to your Business Profile / reviews (e.g. share.google/…). */
 .google-rating {
   --google-star: #fbbc04;
   display: flex;
@@ -861,19 +861,26 @@ html[data-theme="light"] .footer__google-stars {
 }
 .alumni__card.is-flipping { animation: alumniFlip 520ms ease-in-out; }
 
-/* Home: single alumni link right under intro video */
+/* Home: alumni promo card (main link + separate Google rating — avoids nested <a>) */
 .alumni-link-section {
   padding-top: 16px;
   padding-bottom: 28px;
 }
-.alumni-link {
+.alumni-link-card {
   display: grid;
-  gap: 10px;
+  gap: 14px;
   padding: 18px 18px;
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.10);
   background: linear-gradient(135deg, rgba(107,191,107,0.14), rgba(199,173,115,0.10));
   box-shadow: 0 18px 50px rgba(0,0,0,0.30);
+}
+.alumni-link {
+  display: grid;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 12px;
 }
 .alumni-link__headline {
   display: flex;
@@ -904,13 +911,20 @@ html[data-theme="light"] .footer__google-stars {
   flex: 0 0 auto;
   opacity: 0.95;
 }
-.alumni-link:hover {
+.alumni-link-card:hover {
   border-color: rgba(199,173,115,0.28);
   background: linear-gradient(135deg, rgba(107,191,107,0.18), rgba(199,173,115,0.14));
 }
 .alumni-link:focus-visible {
   outline: 2px solid var(--ring);
   outline-offset: 3px;
+}
+.alumni-link-card__google {
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+html[data-theme="light"] .alumni-link-card__google {
+  border-top-color: rgba(11, 27, 20, 0.12);
 }
 .alumni-link__title {
   font-size: clamp(24px, 4vw, 38px);
@@ -923,7 +937,7 @@ html[data-theme="light"] .footer__google-stars {
   color: var(--gold);
   font-weight: 900;
 }
-.alumni-link .google-rating--feature {
+.alumni-link-card .google-rating--feature {
   margin: 0;
 }
 
