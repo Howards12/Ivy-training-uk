@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>try{var t=localStorage.getItem("ivy-theme");document.documentElement.setAttribute("data-theme",t==="light"||t==="dark"?t:"light");}catch(e){document.documentElement.setAttribute("data-theme","light");}</script>
+  <title>Register &amp; lock your spot ($100) | Ivy Training &amp; Consulting UK</title>
+  <meta name="description" content="Register as a new student: submit your details and pay $100 to lock your spot. Zelle, Stripe, or PayPal." />
+
+  <link rel="canonical" href="http://ivytrainingconsulting.com/register.html" />
+  <meta name="theme-color" content="#0b1d14" />
+  <link rel="icon" type="image/png" href="assets/mock-look.png" />
+  <link rel="apple-touch-icon" href="assets/mock-look.png" />
+
+  <meta property="og:title" content="Register &amp; lock your spot ($100) | Ivy Training &amp; Consulting UK" />
+  <meta property="og:description" content="Register as a new student: submit your details and pay $100 to lock your spot." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://ivytrainingconsulting.com/register.html" />
+  <meta property="og:site_name" content="Ivy Training &amp; Consulting UK" />
+  <meta property="og:image" content="http://ivytrainingconsulting.com/assets/hero.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Register &amp; lock your spot ($100) | Ivy Training &amp; Consulting UK" />
+  <meta name="twitter:description" content="Register as a new student: submit your details and pay $100 to lock your spot." />
+  <meta name="twitter:image" content="http://ivytrainingconsulting.com/assets/hero.jpg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+</head>
+<body>
+  <header class="site-header">
+  <nav class="nav container">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.jpg" alt="Ivy Training &amp; Consulting UK logo" class="brand__logo" />
+      <span class="brand__name">Ivy Training &amp; Consulting UK</span>
+    </a>
+
+    <button class="nav__toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false" data-menu-toggle>☰</button>
+
+    <div class="nav__links" id="site-menu" data-menu>
+      <a class="nav__group-label nav__group-link" href="alumni.html">Alumni pages</a>
+      <a class="nav__link" href="courses.html">Course Info</a>
+      <a class="nav__link" href="professionals.html">Working Professionals</a>
+      <a class="nav__link" href="about.html">About</a>
+
+      <span class="nav__divider" aria-hidden="true"></span>
+
+      <a class="nav__link" href="corporate.html">Consulting / Corporate</a>
+      <a class="nav__link is-active" href="register.html">Register</a>
+      <a class="nav__link nav__cta" href="contact.html">Book Consultation</a>
+    </div>
+  </nav>
+</header>
+  <main>
+  <section class="hero hero--compact">
+    <div class="hero__bg">
+      <img src="assets/hero.jpg" alt="" class="hero__bg-media hero__bg-media--blur" />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="container hero__content">
+      <span class="kicker">New students</span>
+      <h1>Lock in your spot</h1>
+      <p>
+        Complete the form below so we can match you to the right cohort, then send the <strong>$100</strong> lock-in fee
+        by Zelle or card (Stripe / PayPal) using the options on this page.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--contact">
+    <div class="container">
+      <div id="reg-success" class="panel register-success" hidden style="margin-bottom:18px;border-color:rgba(107,191,107,0.45);">
+        <h2 style="margin-top:0;">Details received</h2>
+        <p class="muted" style="margin-bottom:0;">
+          Thank you. If you have not already sent the <strong>$100</strong> lock-in payment, please use Zelle, Stripe, or PayPal on this page now,
+          and put your <strong>full name</strong> in the payment memo where possible.
+        </p>
+      </div>
+
+      <div class="grid grid--two contact-grid" style="align-items:start;">
+        <div class="panel">
+          <h2 style="margin-top:0;">Your details</h2>
+          <p class="muted">Fields marked <span aria-hidden="true">*</span> are required.</p>
+
+          <form action="https://formsubmit.co/support@ivytrainingconsulting.com" method="POST" style="margin-top:14px;">
+            <input type="hidden" name="_subject" value="New student registration — $100 spot lock-in" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="true" />
+            <input type="hidden" name="_next" value="http://ivytrainingconsulting.com/register.html?submitted=1" />
+
+            <div class="form-grid">
+              <div>
+                <label class="label" for="reg-name">Full name <span aria-hidden="true">*</span></label>
+                <input class="input" id="reg-name" name="full_name" placeholder="Your legal name" required autocomplete="name" />
+              </div>
+              <div>
+                <label class="label" for="reg-email">Email <span aria-hidden="true">*</span></label>
+                <input class="input" id="reg-email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="form-grid" style="margin-top:12px;">
+              <div>
+                <label class="label" for="reg-phone">Phone <span aria-hidden="true">*</span></label>
+                <input class="input" id="reg-phone" name="phone" type="tel" placeholder="+44 …" required autocomplete="tel" />
+              </div>
+              <div>
+                <label class="label" for="reg-country">Country / time zone</label>
+                <input class="input" id="reg-country" name="country_or_timezone" placeholder="e.g. UK (GMT)" autocomplete="country-name" />
+              </div>
+            </div>
+
+            <div style="margin-top:12px;">
+              <label class="label" for="reg-course">Programme of interest <span aria-hidden="true">*</span></label>
+              <select class="input" id="reg-course" name="programme" required>
+                <option value="" disabled selected>Select a programme</option>
+                <option>Cloud Engineering</option>
+                <option>DevOps</option>
+                <option>Solution Architecture</option>
+                <option>Data Science</option>
+                <option>AI for Engineers</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div style="margin-top:12px;">
+              <label class="label" for="reg-start">Preferred cohort start (if known)</label>
+              <input class="input" id="reg-start" name="preferred_start" placeholder="e.g. May 2026, weekend track" />
+            </div>
+
+            <div style="margin-top:12px;">
+              <label class="label" for="reg-payment-note">How you will pay the $100 lock-in</label>
+              <select class="input" id="reg-payment-note" name="intended_payment_method">
+                <option>Zelle</option>
+                <option>Stripe (card)</option>
+                <option>PayPal</option>
+              </select>
+            </div>
+
+            <div style="margin-top:12px;">
+              <label class="label" for="reg-notes">Anything else we should know?</label>
+              <textarea class="input" id="reg-notes" name="notes" rows="4" placeholder="Background, goals, questions…"></textarea>
+            </div>
+
+            <div style="margin-top:14px;">
+              <label class="label" style="display:flex;gap:10px;align-items:flex-start;font-weight:normal;cursor:pointer;">
+                <input type="checkbox" name="lock_in_ack" value="yes" required style="margin-top:4px;flex-shrink:0;" />
+                <span>I understand the <strong>$100</strong> is a non-refundable lock-in fee to reserve my spot, and I will complete payment using the options on this page (or have already done so). <span aria-hidden="true">*</span></span>
+              </label>
+            </div>
+
+            <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end;">
+              <button class="btn btn--primary" type="submit">Submit registration</button>
+              <a class="btn btn--ghost" href="contact.html">Questions first</a>
+            </div>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h2 style="margin-top:0;">$100 lock-in payment</h2>
+          <p class="muted">Send exactly <strong>$100 USD</strong> (or the GBP equivalent your checkout shows). Use the same name as on the form.</p>
+
+          <h3 style="margin-top:18px;">Zelle</h3>
+          <p class="muted">Send to this email in your banking app:</p>
+          <p>
+            <strong id="zelle-email">architect.victoribe@gmail.com</strong>
+            <button type="button" class="btn btn--small btn--ghost" id="copy-zelle" style="margin-left:8px;vertical-align:middle;">Copy email</button>
+          </p>
+          <p class="muted" style="font-size:14px;">Memo: your full name + “Ivy lock-in”.</p>
+
+          <h3 style="margin-top:22px;">Stripe</h3>
+          <p class="muted" style="font-size:14px;">Pay by card via Stripe Checkout (secure payment page).</p>
+          <a class="btn btn--primary" id="pay-stripe" href="https://buy.stripe.com/9B600jbwc4c79QXdVn3Nm00" target="_blank" rel="noopener">Pay $100 with Stripe</a>
+
+          <h3 style="margin-top:22px;">PayPal</h3>
+          <p class="muted" style="font-size:14px;">Pay via PayPal.Me (opens PayPal to complete <strong>$100</strong>).</p>
+          <a class="btn btn--ghost" id="pay-paypal" href="https://paypal.me/Victoribe205/100" target="_blank" rel="noopener">Pay $100 with PayPal</a>
+
+          <div class="panel" style="margin-top:18px;background:rgba(0,0,0,0.12);">
+            <h3 style="margin-top:0;font-size:1rem;">Privacy &amp; receipts</h3>
+            <p class="muted" style="margin-bottom:0;font-size:14px;">Card and PayPal payments are processed by <strong>Stripe</strong> and <strong>PayPal</strong> under their own terms and privacy notices. We receive confirmation of payment and details needed to match your payment to your registration. See our <a class="text-link" href="privacy.html">Privacy Policy</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+  <footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <strong>Ivy Training &amp; Consulting UK Limited</strong>
+      <p class="muted">Cloud • DevOps • Solution Architecture • Data Science • AI</p>
+      <p class="muted">Email: support@ivytrainingconsulting.com</p>
+      <p class="muted">WhatsApp: <a class="text-link" href="https://wa.me/13465466197" target="_blank" rel="noopener">+1 346 546 6197</a></p>
+      <p class="footer__google-reviews muted">
+        <span class="footer__google-stars" aria-hidden="true">★★★★★</span>
+        <span class="footer__google-reviews-text">Rated <strong>5.0</strong> on <a class="text-link" href="https://g.page/r/CeF9Am_g7b83EBM/review" target="_blank" rel="noopener noreferrer">Google</a> · 15 reviews</span>
+      </p>
+      <div class="footer__trustpilot" aria-label="Trustpilot">
+        <div class="trustpilot-widget" data-locale="en-US" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="69d8a72f3f9345fb75e31a40" data-style-height="150px" data-style-width="100%" data-token="c7be6a36-9b83-4ad7-8071-8a8cc99cf762">
+          <a href="https://www.trustpilot.com/review/ivytrainingconsulting.com" target="_blank" rel="noopener noreferrer">Trustpilot</a>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <strong>Students</strong>
+      <a href="courses.html">Course Info</a>
+      <a href="register.html">Register / lock your spot</a>
+      <a href="student-handbook.html">Student Handbook</a>
+      <a href="contact.html">Book Consultation</a>
+    </div>
+
+    <div>
+      <strong>Trust &amp; Compliance</strong>
+      <a href="privacy.html">Privacy Policy (GDPR)</a>
+      <a href="gdpr.html">GDPR Statement</a>
+      <p class="muted" style="margin-top:10px;">Accreditation: Available on request.</p>
+    </div>
+  </div>
+
+  <div class="footer__bottom container">
+    <span class="muted">© <span id="year"></span> Ivy Training &amp; Consulting UK</span>
+  </div>
+</footer>
+  <script>
+  window.IVY_PAYMENT_LINKS = {
+    stripe: "https://buy.stripe.com/9B600jbwc4c79QXdVn3Nm00",
+    paypal: "https://paypal.me/Victoribe205/100"
+  };
+  </script>
+  <script>
+  (function () {
+    var cfg = window.IVY_PAYMENT_LINKS || {};
+    var stripeBtn = document.getElementById("pay-stripe");
+    var paypalBtn = document.getElementById("pay-paypal");
+    if (stripeBtn) {
+      if (cfg.stripe) {
+        stripeBtn.href = cfg.stripe;
+      } else {
+        stripeBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          alert("Stripe is not connected yet. Add your Payment Link URL to IVY_PAYMENT_LINKS.stripe in register.html (ask your team for the https://buy.stripe.com/… link).");
+        });
+      }
+    }
+    if (paypalBtn) {
+      if (cfg.paypal) {
+        paypalBtn.href = cfg.paypal;
+      } else {
+        paypalBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          alert("PayPal is not connected yet. Add your checkout or PayPal.Me URL to IVY_PAYMENT_LINKS.paypal in register.html.");
+        });
+      }
+    }
+    if (location.search.indexOf("submitted=1") !== -1) {
+      var ok = document.getElementById("reg-success");
+      if (ok) ok.removeAttribute("hidden");
+    }
+    var copyBtn = document.getElementById("copy-zelle");
+    var zelleEl = document.getElementById("zelle-email");
+    if (copyBtn && zelleEl) {
+      copyBtn.addEventListener("click", function () {
+        var text = zelleEl.textContent || "";
+        function done() {
+          copyBtn.textContent = "Copied";
+          setTimeout(function () { copyBtn.textContent = "Copy email"; }, 2000);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done).catch(function () {
+            window.prompt("Copy this Zelle email:", text);
+          });
+        } else {
+          window.prompt("Copy this Zelle email:", text);
+        }
+      });
+    }
+  })();
+  </script>
+  <script src="js/main.js"></script>
+  <script src="js/schema.js"></script>
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+Tawk_API.onLoad = function() {
+  if (typeof Tawk_API.hideWidget === "function") Tawk_API.hideWidget();
+};
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/69c3ed84a263321c38595786/1jkilfjkh';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+</body>
+</html>
